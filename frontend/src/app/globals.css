@@ -203,3 +203,62 @@
 .animate-progress-pulse {
   animation: progressPulse 2s ease-in-out infinite;
 }
+
+/* Slide up */
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-slide-up {
+  animation: slideUp 0.6s ease-out forwards;
+}
+
+/* Slide in from left */
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+.animate-slide-in-left {
+  animation: slideInLeft 0.5s ease-out forwards;
+}
+
+/* Scale in */
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+.animate-scale-in {
+  animation: scaleIn 0.4s ease-out forwards;
+}
+
+/* Pulse dot */
+@keyframes pulseDot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(1.5); }
+}
+.animate-pulse-dot {
+  animation: pulseDot 1.5s ease-in-out infinite;
+}
+
+/* Typewriter cursor */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+.animate-blink {
+  animation: blink 1s step-end infinite;
+}
+
+/* Stagger slide up for onboarding */
+.stagger-slide > * {
+  opacity: 0;
+  animation: slideUp 0.5s ease-out forwards;
+}
+.stagger-slide > *:nth-child(1) { animation-delay: 0.1s; }
+.stagger-slide > *:nth-child(2) { animation-delay: 0.2s; }
+.stagger-slide > *:nth-child(3) { animation-delay: 0.3s; }
+.stagger-slide > *:nth-child(4) { animation-delay: 0.4s; }
+.stagger-slide > *:nth-child(5) { animation-delay: 0.5s; }
+.stagger-slide > *:nth-child(6) { animation-delay: 0.6s; }
+.stagger-slide > *:nth-child(7) { animation-delay: 0.7s; }
+.stagger-slide > *:nth-child(8) { animation-delay: 0.8s; }

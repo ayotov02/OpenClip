@@ -16,7 +16,7 @@ export default function SignInPage() {
   const handleSignIn = (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
-    setTimeout(() => router.push("/dashboard"), 600);
+    setTimeout(() => router.push("/onboarding"), 600);
   };
 
   return (
