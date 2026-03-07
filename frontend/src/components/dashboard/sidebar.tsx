@@ -15,6 +15,7 @@ import {
   Sparkles,
   LayoutDashboard,
   FileStack,
+  ImageIcon,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import {
@@ -24,6 +25,7 @@ import {
 } from "@/components/ui/tooltip";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Separator } from "@/components/ui/separator";
+import { ThreadList } from "@/components/assistant-ui/thread-list";
 
 interface NavItem {
   href: string;
@@ -38,7 +40,13 @@ const navGroups: { label: string; items: NavItem[] }[] = [
       { href: "/dashboard", icon: LayoutDashboard, label: "Overview" },
       { href: "/dashboard/projects", icon: Scissors, label: "Projects" },
       { href: "/dashboard/faceless", icon: Video, label: "Faceless Studio" },
+    ],
+  },
+  {
+    label: "BRAND",
+    items: [
       { href: "/dashboard/brands", icon: Palette, label: "Brand Kits" },
+      { href: "/dashboard/assets", icon: ImageIcon, label: "Creative Assets" },
     ],
   },
   {
@@ -63,6 +71,8 @@ const navGroups: { label: string; items: NavItem[] }[] = [
   },
 ];
 
+const CHAT_ROUTES = ["/dashboard/create", "/dashboard/generate", "/dashboard/compose", "/dashboard/research"];
+
 export function Sidebar() {
   const pathname = usePathname();
   const [collapsed, setCollapsed] = useState(true);
@@ -71,6 +81,8 @@ export function Sidebar() {
     if (href === "/dashboard") return pathname === "/dashboard";
     return pathname.startsWith(href);
   };
+
+  const isOnChatPage = CHAT_ROUTES.some((route) => pathname.startsWith(route));
 
   return (
     <aside
@@ -138,6 +150,19 @@ export function Sidebar() {
             )}
           </div>
         ))}
+
+        {/* Thread list — shown when sidebar is expanded and on a chat page */}
+        {!collapsed && isOnChatPage && (
+          <>
+            <Separator className="mx-4 my-3 bg-border/50" />
+            <div className="px-3">
+              <div className="mb-1 px-1 text-[10px] font-semibold tracking-wider text-muted-foreground/70 uppercase">
+                THREADS
+              </div>
+              <ThreadList />
+            </div>
+          </>
+        )}
       </ScrollArea>
 
       {/* Self-Hosted Banner */}

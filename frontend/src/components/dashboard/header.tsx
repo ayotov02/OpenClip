@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Search, Moon, Sun, Scissors, Video, BarChart3 } from "lucide-react";
+import { Search, Moon, Sun, Video, ImageIcon, Mic, Compass } from "lucide-react";
 import { useTheme } from "next-themes";
 import { cn } from "@/lib/utils";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
@@ -18,6 +18,13 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { mockUser, mockJobs } from "@/lib/mock-data";
 
+const AI_TABS = [
+  { label: "Create", href: "/dashboard/create", icon: Video, description: "Video AI" },
+  { label: "Generate", href: "/dashboard/generate", icon: ImageIcon, description: "Image AI" },
+  { label: "Compose", href: "/dashboard/compose", icon: Mic, description: "Voice AI" },
+  { label: "Research", href: "/dashboard/research", icon: Compass, description: "Insights" },
+];
+
 export function Header() {
   const pathname = usePathname();
   const { theme, setTheme } = useTheme();
@@ -26,13 +33,9 @@ export function Header() {
 
   return (
     <header className="absolute inset-x-0 top-0 z-30 flex h-14 items-center justify-center gap-4 px-6 pointer-events-none">
-      {/* Center — Feature tabs */}
+      {/* Center — AI mode tabs */}
       <div className="pointer-events-auto flex items-center gap-1 rounded-full border border-border/30 bg-background/70 backdrop-blur-md p-1">
-        {[
-          { label: "Projects", href: "/dashboard/projects", icon: Scissors },
-          { label: "Faceless", href: "/dashboard/faceless", icon: Video },
-          { label: "Analytics", href: "/dashboard/analytics", icon: BarChart3 },
-        ].map((tab) => (
+        {AI_TABS.map((tab) => (
           <Link
             key={tab.href}
             href={tab.href}

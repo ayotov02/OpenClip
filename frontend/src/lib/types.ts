@@ -154,3 +154,41 @@ export interface SocialAccount {
   connected: boolean;
   connectedAt?: string;
 }
+
+export type ChatMode = "create" | "generate" | "compose" | "research";
+
+export interface ChatThread {
+  id: string;
+  title: string;
+  mode: ChatMode;
+  isArchived: boolean;
+  messageCount: number;
+  createdAt: string;
+  updatedAt: string;
+}
+
+export interface ChatMessage {
+  id: string;
+  threadId: string;
+  role: "user" | "assistant";
+  content: string;
+  createdAt: string;
+}
+
+export type AssetType = "image" | "video" | "audio";
+
+export interface CreativeAsset {
+  id: string;
+  name: string;
+  type: AssetType;
+  projectId?: string;
+  projectName: string;
+  prompt: string;
+  model: string;
+  resolution?: string;
+  duration?: string;
+  fileSize: string;
+  fileUrl?: string;
+  thumbnailUrl?: string;
+  createdAt: string;
+}
