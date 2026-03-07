@@ -52,9 +52,12 @@ async def update_project(
     user: User = Depends(get_current_user),
     db: AsyncSession = Depends(get_db),
 ):
-    project = await svc.update_faceless_project(db, project_id, data)
-    if not project:
+    existing = await svc.get_faceless_project(db, project_id)
+    if not existing:
         raise HTTPException(status_code=404, detail="Faceless project not found")
+    if existing.user_id != user.id:
+        raise HTTPException(status_code=403, detail="Not authorized")
+    project = await svc.update_faceless_project(db, project_id, data)
     return project
 
 
@@ -64,8 +67,12 @@ async def delete_project(
     user: User = Depends(get_current_user),
     db: AsyncSession = Depends(get_db),
 ):
-    if not await svc.delete_faceless_project(db, project_id):
+    existing = await svc.get_faceless_project(db, project_id)
+    if not existing:
         raise HTTPException(status_code=404, detail="Faceless project not found")
+    if existing.user_id != user.id:
+        raise HTTPException(status_code=403, detail="Not authorized")
+    await svc.delete_faceless_project(db, project_id)
 
 
 @router.post("/{project_id}/generate", status_code=202)
@@ -74,5 +81,27 @@ async def generate(
     user: User = Depends(get_current_user),
     db: AsyncSession = Depends(get_db),
 ):
-    # TODO: dispatch Celery task for faceless video pipeline
-    return {"message": "Faceless generation started", "project_id": str(project_id)}
+    existing = await svc.get_faceless_project(db, project_id)
+    if not existing:
+        raise HTTPException(status_code=404, detail="Faceless project not found")
+    if existing.user_id != user.id:
+        raise HTTPException(status_code=403, detail="Not authorized")
+
+    from app.services import job_service
+    from app.tasks.faceless_tasks import orchestrate_pipeline
+
+    task = orchestrate_pipeline.delay(str(project_id))
+
+    job = await job_service.create_job(
+        db,
+        user_id=user.id,
+        job_type="faceless_generation",
+        celery_task_id=task.id,
+        metadata={"project_id": str(project_id)},
+    )
+
+    return {
+        "message": "Faceless generation started",
+        "project_id": str(project_id),
+        "job_id": str(job.id),
+    }

@@ -1,0 +1,335 @@
+# docs.kie.ai
+
+## Docs
+- [Getting Started with KIE API (Important)](https://docs.kie.ai/1973359m0.md): 
+- [Market](https://docs.kie.ai/market/quickstart.md): 
+- Image    Models > 4o Image API [4o Image API Quickstart](https://docs.kie.ai/4o-image-api/quickstart.md): 
+- Image    Models > 4o Image API [4o Image Generation Callbacks](https://docs.kie.ai/4o-image-api/generate-4-o-image-callbacks.md): 
+- Image    Models > Flux Kontext API [Flux Kontext API Quickstart](https://docs.kie.ai/flux-kontext-api/quickstart.md): 
+- Image    Models > Flux Kontext API [Image Generation or Editing Callbacks](https://docs.kie.ai/flux-kontext-api/generate-or-edit-image-callbacks.md): 
+- Video Models > Runway API [Runway API Quickstart](https://docs.kie.ai/runway-api/quickstart.md): 
+- Video Models > Runway API [AI Video Generation Callbacks](https://docs.kie.ai/runway-api/generate-ai-video-callbacks.md): 
+- Video Models > Runway API [AI Video Extension Callbacks](https://docs.kie.ai/runway-api/extend-ai-video-callbacks.md): 
+- Video Models > Runway API > Aleph [Aleph Video Generation Callbacks](https://docs.kie.ai/runway-api/generate-aleph-video-callbacks.md): 
+- Veo3.1 API [Veo3.1 API Quickstart](https://docs.kie.ai/veo3-api/quickstart.md): 
+- Veo3.1 API [Veo3.1 Video Generation Callbacks](https://docs.kie.ai/veo3-api/generate-veo-3-video-callbacks.md): 
+- Veo3.1 API [Get 4K Video Callbacks](https://docs.kie.ai/veo3-api/get-veo-3-4k-video-callbacks.md): 
+- Suno API [Suno API Quickstart](https://docs.kie.ai/suno-api/quickstart.md): 
+- Suno API > Music Generation [Music Generation Callbacks](https://docs.kie.ai/suno-api/generate-music-callbacks.md): 
+- Suno API > Music Generation [Music Extension Callbacks](https://docs.kie.ai/suno-api/extend-music-callbacks.md): 
+- Suno API > Music Generation [Audio Upload and Cover Callbacks](https://docs.kie.ai/suno-api/upload-and-cover-audio-callbacks.md): 
+- Suno API > Music Generation [Audio Upload and Extension Callbacks](https://docs.kie.ai/suno-api/upload-and-extend-audio-callbacks.md): 
+- Suno API > Music Generation [Add Instrumental Callbacks](https://docs.kie.ai/suno-api/add-instrumental-callbacks.md): 
+- Suno API > Music Generation [Add Vocals Callbacks](https://docs.kie.ai/suno-api/add-vocals-callbacks.md): 
+- Suno API > Music Generation [Music Cover Generation Callbacks](https://docs.kie.ai/suno-api/cover-suno-callbacks.md): 
+- Suno API > Music Generation [Replace Music Section Callbacks](https://docs.kie.ai/suno-api/replace-section-callbacks.md): 
+- Suno API > Lyrics Generation [Lyrics Generation Callbacks](https://docs.kie.ai/suno-api/generate-lyrics-callbacks.md): 
+- Suno API > WAV Conversion [Convert to WAV Callbacks](https://docs.kie.ai/suno-api/convert-to-wav-callbacks.md): 
+- Suno API > Vocal Removal [Audio Separation Callbacks](https://docs.kie.ai/suno-api/separate-vocals-callbacks.md): 
+- Suno API > Vocal Removal [MIDI Generation Callbacks](https://docs.kie.ai/suno-api/generate-midi-callbacks.md): 
+- Suno API > Music Video Generation [Music Video Generation Callbacks](https://docs.kie.ai/suno-api/create-music-video-callbacks.md): 
+- [File Upload API Quickstart](https://docs.kie.ai/file-upload-api/quickstart.md): 
+- [Common API Quickstart](https://docs.kie.ai/common-api/quickstart.md): 
+- [Webhook Security Verification](https://docs.kie.ai/common-api/webhook-verification.md): 
+- [KIE A​​PI 入门指南（重要）](https://docs.kie.ai/cn.md): 
+- [Market](https://docs.kie.ai/cn/market/quickstart.md): 
+- Image    Models > 4o Image API [4o Image API 快速开始](https://docs.kie.ai/cn/4o-image-api/quickstart.md): 
+- Image    Models > 4o Image API [4o 图片生成回调](https://docs.kie.ai/cn/4o-image-api/generate-4-o-image-callbacks.md): 
+- Image    Models > Flux Kontext API [Flux Kontext API 快速开始](https://docs.kie.ai/cn/flux-kontext-api/quickstart.md): 
+- Image    Models > Flux Kontext API [图像生成或编辑回调](https://docs.kie.ai/cn/flux-kontext-api/generate-or-edit-image-callbacks.md): 
+- Video Models > Runway API [Runway API 快速开始](https://docs.kie.ai/cn/runway-api/quickstart.md): 
+- Video Models > Runway API [AI 视频生成回调](https://docs.kie.ai/cn/runway-api/generate-ai-video-callbacks.md): 
+- Video Models > Runway API [AI 视频扩展回调](https://docs.kie.ai/cn/runway-api/extend-ai-video-callbacks.md): 
+- Video Models > Runway API > Aleph [Aleph 视频生成回调](https://docs.kie.ai/cn/runway-api/generate-aleph-video-callbacks.md): 
+- Veo3.1 API [Veo3.1 API 快速开始](https://docs.kie.ai/cn/veo3-api/quickstart.md): 
+- Veo3.1 API [Veo3.1 视频生成回调](https://docs.kie.ai/cn/veo3-api/generate-veo-3-video-callbacks.md): 
+- Veo3.1 API [获取 4K 视频回调](https://docs.kie.ai/cn/veo3-api/get-veo-3-4k-video-callbacks.md): 
+- Suno API [Suno API 快速开始](https://docs.kie.ai/cn/suno-api/quickstart.md): 
+- Suno API > Music Generation [生成音乐回调](https://docs.kie.ai/cn/suno-api/generate-music-callbacks.md): 
+- Suno API > Music Generation [音乐扩展回调](https://docs.kie.ai/cn/suno-api/extend-music-callbacks.md): 
+- Suno API > Music Generation [音频上传和翻唱回调](https://docs.kie.ai/cn/suno-api/upload-and-cover-audio-callbacks.md): 
+- Suno API > Music Generation [音频上传和扩展回调](https://docs.kie.ai/cn/suno-api/upload-and-extend-audio-callbacks.md): 
+- Suno API > Music Generation [添加伴奏回调](https://docs.kie.ai/cn/suno-api/add-instrumental-callbacks.md): 
+- Suno API > Music Generation [添加人声回调](https://docs.kie.ai/cn/suno-api/add-vocals-callbacks.md): 
+- Suno API > Music Generation [音乐封面生成回调](https://docs.kie.ai/cn/suno-api/cover-suno-callbacks.md): 
+- Suno API > Music Generation [替换音乐分区回调](https://docs.kie.ai/cn/suno-api/replace-section-callbacks.md): 
+- Suno API > Lyrics Generation [生成歌词回调](https://docs.kie.ai/cn/suno-api/generate-lyrics-callbacks.md): 
+- Suno API > WAV Conversion [转换为WAV格式回调](https://docs.kie.ai/cn/suno-api/convert-to-wav-callbacks.md): 
+- Suno API > Vocal Removal [音频分离回调](https://docs.kie.ai/cn/suno-api/separate-vocals-callbacks.md): 
+- Suno API > Vocal Removal [MIDI 生成回调](https://docs.kie.ai/cn/suno-api/generate-midi-callbacks.md): 
+- Suno API > Music Video Generation [MP4生成完成回调](https://docs.kie.ai/cn/suno-api/create-music-video-callbacks.md): 
+- [文件上传 API 快速开始](https://docs.kie.ai/cn/file-upload-api/quickstart.md): 
+- [通用 API 快速入门](https://docs.kie.ai/cn/common-api/quickstart.md): 
+- [Webhook 安全校验](https://docs.kie.ai/cn/common-api/webhook-verification.md): 
+
+## API Docs
+- Image    Models > Seedream [Seedream3.0 - Text to Image](https://docs.kie.ai/market/seedream/seedream.md): Image generation by Seedream3.0
+- Image    Models > Seedream [Seedream4.0 - Text to Image](https://docs.kie.ai/market/seedream/seedream-v4-text-to-image.md): High-quality photorealistic image generation powered by Seedream4.0's advanced AI model
+- Image    Models > Seedream [Seedream4.0 - Edit](https://docs.kie.ai/market/seedream/seedream-v4-edit.md): Image editing by Seedream4.0
+- Image    Models > Seedream [Seedream4.5 - Text to Image](https://docs.kie.ai/market/seedream/4-5-text-to-image.md): High-quality photorealistic image generation powered by Seedream's advanced AI model
+- Image    Models > Seedream [Seedream4.5 - Edit](https://docs.kie.ai/market/seedream/4-5-edit.md): Image editing by Seedream4.5
+- Image    Models > Z-image [Z-Image](https://docs.kie.ai/market/z-image/z-image.md): Image generation by z-image
+- Image    Models > Google [Google - Nano Banana 2](https://docs.kie.ai/market/google/nanobanana2.md): Image generation by Nano Banana 2
+- Image    Models > Google [Google - imagen4-fast](https://docs.kie.ai/market/google/imagen4-fast.md): Image generation by Google imagen4-fast
+- Image    Models > Google [Google - imagen4-ultra](https://docs.kie.ai/market/google/imagen4-ultra.md): Image generation by Google imagen4-ultra
+- Image    Models > Google [Google - imagen4](https://docs.kie.ai/market/google/imagen4.md): Image generation by Google imagen4
+- Image    Models > Google [Google - Nano Banana Edit](https://docs.kie.ai/market/google/nano-banana-edit.md): Image editing using Google's Nano Banana Edit model
+- Image    Models > Google [Google - Nano Banana](https://docs.kie.ai/market/google/nano-banana.md): Content generation using google/nano-banana
+- Image    Models > Google [Google - Nano Banana Pro](https://docs.kie.ai/market/google/pro-image-to-image.md): Image generation using Google's Pro Image to Image model
+- Image    Models > Flux-2 [Flux-2 - Pro Image to Image](https://docs.kie.ai/market/flux2/pro-image-to-image.md): Image generation by flux-2/pro-image-to-image
+- Image    Models > Flux-2 [Flux-2 - Pro Text to Image](https://docs.kie.ai/market/flux2/pro-text-to-image.md): High-quality photorealistic image generation powered by Flux-2's advanced AI model
+- Image    Models > Flux-2 [Flux-2 - Image to Image](https://docs.kie.ai/market/flux2/flex-image-to-image.md): Image generation by flux-2/flex-image-to-image
+- Image    Models > Flux-2 [Flux-2 - Text to Image](https://docs.kie.ai/market/flux2/flex-text-to-image.md): High-quality photorealistic image generation powered by Flux-2's advanced AI model
+- Image    Models > Grok Imagine [Grok Imagine - Text to Image](https://docs.kie.ai/market/grok-imagine/text-to-image.md): ## Query Task Status
+- Image    Models > Grok Imagine [Grok Imagine - image to image](https://docs.kie.ai/market/grok-imagine/image-to-image.md): Content generation using grok-imagine/image-to-image
+- Image    Models > Grok Imagine [Grok Imagine - Image Upscale](https://docs.kie.ai/market/grok-imagine/upscale.md): 
+- Image    Models > GPT Image [GPT Image-1.5 - Text to Image](https://docs.kie.ai/market/gpt-image/1-5-text-to-image.md): ## Overview
+- Image    Models > GPT Image [GPT Image-1.5 - Image to Image](https://docs.kie.ai/market/gpt-image/1-5-image-to-image.md): ## Overview
+- Image    Models > Topaz [Topaz - Image Upscale](https://docs.kie.ai/market/topaz/image-upscale.md): Enhance image resolution and quality using advanced AI upscaling powered by Topaz
+- Image    Models > Recraft [Recraft - Remove Background](https://docs.kie.ai/market/recraft/remove-background.md): remove background by recraft/remove-background
+- Image    Models > Recraft [Recraft - Crisp Upscale](https://docs.kie.ai/market/recraft/crisp-upscale.md): Enhance image resolution and quality using advanced AI upscaling powered by Recraft
+- Image    Models > Ideogram [Ideogram - V3 Reframe](https://docs.kie.ai/market/ideogram/v3-reframe.md): Image generation by ideogram/v3-reframe
+- Image    Models > Ideogram [Ideogram - Character Edit](https://docs.kie.ai/market/ideogram/character-edit.md): Image generation by ideogram/character-edit
+- Image    Models > Ideogram [Ideogram - Character Remix](https://docs.kie.ai/market/ideogram/character-remix.md): Image generation by ideogram/character-remix
+- Image    Models > Ideogram [Ideogram - Character](https://docs.kie.ai/market/ideogram/character.md): Image generation by ideogram/character
+- Image    Models > Qwen [Qwen - Text to Image](https://docs.kie.ai/market/qwen/text-to-image.md): High-quality photorealistic image generation powered by Qwen's advanced AI model
+- Image    Models > Qwen [Qwen - Image to Image](https://docs.kie.ai/market/qwen/image-to-image.md): Image generation by Qwen's advanced AI model
+- Image    Models > Qwen [Qwen - Image Edit](https://docs.kie.ai/market/qwen/image-edit.md): Image generation by qwen/image-edit
+- Image    Models > 4o Image API [Generate 4o Image](https://docs.kie.ai/4o-image-api/generate-4-o-image.md): Create a new 4o Image generation task. Generated images are stored for 14 days, after which they expire.
+- Image    Models > 4o Image API [Get 4o Image Details](https://docs.kie.ai/4o-image-api/get-4-o-image-details.md): Query 4o Image generation task details using taskId, including generation status, parameters and results.
+- Image    Models > 4o Image API [Get Direct Download URL](https://docs.kie.ai/4o-image-api/get-4-o-image-download-url.md): Convert an image URL to a direct download URL. This helps solve cross-domain issues when downloading images directly. The returned URL is valid for 20 minutes.
+- Image    Models > Flux Kontext API [Generate or Edit Image](https://docs.kie.ai/flux-kontext-api/generate-or-edit-image.md): Create a new image generation or editing task using the Flux Kontext AI model.
+- Image    Models > Flux Kontext API [Get Image Details](https://docs.kie.ai/flux-kontext-api/get-image-details.md): Query the status and results of an image generation or editing task.
+- Video Models > Grok Imagine [Grok Imagine Text to Video](https://docs.kie.ai/market/grok-imagine/text-to-video.md): ## Query Task Status
+- Video Models > Grok Imagine [Grok Imagine Image to Video](https://docs.kie.ai/market/grok-imagine/image-to-video.md): ## Query Task Status
+- Video Models > Kling [Kling 2.6 Text to Video](https://docs.kie.ai/market/kling/text-to-video.md): ## Query Task Status
+- Video Models > Kling [Kling 2.6 Image to Video](https://docs.kie.ai/market/kling/image-to-video.md): ## Query Task Status
+- Video Models > Kling [Kling - V2.5 Turbo Image to Video Pro](https://docs.kie.ai/market/kling/v25-turbo-image-to-video-pro.md): ## Query Task Status
+- Video Models > Kling [Kling - V2.5 Turbo Text to Video Pro](https://docs.kie.ai/market/kling/v25-turbo-text-to-video-pro.md): ## Query Task Status
+- Video Models > Kling [Kling AI Avatar Standard](https://docs.kie.ai/market/kling/ai-avatar-standard.md): ## Query Task Status
+- Video Models > Kling [Kling AI Avatar Pro](https://docs.kie.ai/market/kling/ai-avatar-pro.md): ## Query Task Status
+- Video Models > Kling [Kling V2.1 Master Image to Video](https://docs.kie.ai/market/kling/v2-1-master-image-to-video.md): ## Query Task Status
+- Video Models > Kling [Kling V2.1 Master Text to Video](https://docs.kie.ai/market/kling/v2-1-master-text-to-video.md): ## Query Task Status
+- Video Models > Kling [Kling V2.1 Pro](https://docs.kie.ai/market/kling/v2-1-pro.md): ## Query Task Status
+- Video Models > Kling [Kling V2.1 Standard](https://docs.kie.ai/market/kling/v2-1-standard.md): ## Query Task Status
+- Video Models > Kling [Kling 2.6 motion-control](https://docs.kie.ai/market/kling/motion-control.md): ## File Upload Requirements
+- Video Models > Kling [Kling 3.0](https://docs.kie.ai/market/kling/kling-3-0.md): Generate high-quality videos with advanced multi-shot capabilities and element references using Kling 3.0 AI 
+- Video Models > Bytedance [Bytedance Seedance 1.5 Pro](https://docs.kie.ai/market/bytedance/seedance-1-5-pro.md): ## Query Task Status
+- Video Models > Bytedance [Bytedance V1 Pro Fast Image to Video](https://docs.kie.ai/market/bytedance/v1-pro-fast-image-to-video.md): ## Query Task Status
+- Video Models > Bytedance [Bytedance V1 Pro Image to Video](https://docs.kie.ai/market/bytedance/v1-pro-image-to-video.md): Content generation using bytedance/v1-pro-image-to-video
+- Video Models > Bytedance [Bytedance - V1 Pro Text to Video](https://docs.kie.ai/market/bytedance/v1-pro-text-to-video.md): Content generation using bytedance/v1-pro-text-to-video
+- Video Models > Bytedance [Bytedance - V1 Lite Image to Video](https://docs.kie.ai/market/bytedance/v1-lite-image-to-video.md): Content generation using bytedance/v1-lite-image-to-video
+- Video Models > Bytedance [Bytedance - V1 Lite Text to Video](https://docs.kie.ai/market/bytedance/v1-lite-text-to-video.md): Content generation using bytedance/v1-lite-text-to-video
+- Video Models > Hailuo [Hailuo 2.3 Pro Image to Video](https://docs.kie.ai/market/hailuo/2-3-image-to-video-pro.md): Content generation using hailuo/2-3-image-to-video-pro
+- Video Models > Hailuo [Hailuo 2.3 Standard Image to Video](https://docs.kie.ai/market/hailuo/2-3-image-to-video-standard.md): Content generation using hailuo/2-3-image-to-video-standard
+- Video Models > Hailuo [Hailuo Pro Text to Video](https://docs.kie.ai/market/hailuo/02-text-to-video-pro.md): Content generation using hailuo/02-text-to-video-pro
+- Video Models > Hailuo [ Hailuo Pro Image to Video](https://docs.kie.ai/market/hailuo/02-image-to-video-pro.md): Content generation using hailuo/02-image-to-video-pro
+- Video Models > Hailuo [Hailuo Standard Text to Video](https://docs.kie.ai/market/hailuo/02-text-to-video-standard.md): Content generation using hailuo/02-text-to-video-standard
+- Video Models > Hailuo [Hailuo Standard Image to Video](https://docs.kie.ai/market/hailuo/02-image-to-video-standard.md): Content generation using hailuo/02-image-to-video-standard
+- Video Models > Sora2 [Sora2 - Image to Video](https://docs.kie.ai/market/sora2/sora-2-image-to-video.md): Transform images into dynamic videos powered by Sora-2-image-to-video's advanced AI model
+- Video Models > Sora2 [Sora2 - Text to Video](https://docs.kie.ai/market/sora2/sora-2-text-to-video.md): High-quality video generation from text descriptions powered by Sora-2-text-to-video's advanced AI model
+- Video Models > Sora2 [Sora2 - Pro Image to Video](https://docs.kie.ai/market/sora2/sora-2-pro-image-to-video.md): Transform images into dynamic videos powered by Sora-2-pro-image-to-video's advanced AI model
+- Video Models > Sora2 [Sora2 - Pro Text to Video](https://docs.kie.ai/market/sora2/sora-2-pro-text-to-video.md): High-quality video generation from text descriptions powered by Sora-2-pro-text-to-video's advanced AI model
+- Video Models > Sora2 [Sora2 - Watermark Remover](https://docs.kie.ai/market/sora2/sora-watermark-remover.md): Content generation using sora-watermark-remover
+- Video Models > Sora2 [Sora2 - Pro Storyboard](https://docs.kie.ai/market/sora-2-pro-storyboard.md): Video generation using sora-2-pro-storyboard
+- Video Models > Sora2 [Sora2 - Characters](https://docs.kie.ai/market/sora2/sora-2-characters.md): Create dynamic character animations powered by Sora-2-characters' advanced AI model
+- Video Models > Sora2 [Sora2 - Characters Pro](https://docs.kie.ai/market/sora2/sora-2-characters-pro.md): > Create dynamic character animations from existing video tasks using Sora-2-characters-pro advanced AI model
+- Video Models > Wan [Wan 2.6 - Image to Video](https://docs.kie.ai/market/wan/2-6-image-to-video.md): Transform static images into dynamic videos powered by Wan's advanced AI model
+- Video Models > Wan [Wan 2.6 - Text to Video](https://docs.kie.ai/market/wan/2-6-text-to-video.md): High-quality video generation from text descriptions powered by Wan's advanced AI model
+- Video Models > Wan [Wan 2.6 - Video to Video](https://docs.kie.ai/market/wan/2-6-video-to-video.md): Transform existing videos with new prompts using Wan's advanced AI model
+- Video Models > Wan [Wan - Image to Video](https://docs.kie.ai/market/wan/2-2-a14b-image-to-video-turbo.md): Transform images into dynamic videos powered by Wan's advanced AI model
+- Video Models > Wan [Wan - Text to Video](https://docs.kie.ai/market/wan/2-2-a14b-text-to-video-turbo.md): High-quality video generation from text descriptions powered by Wan's advanced AI model
+- Video Models > Wan [Wan - 2.2 A14B Speech to Video Turbo](https://docs.kie.ai/market/wan/2-2-a14b-speech-to-video-turbo.md): Generate videos using Wan's advanced AI model
+- Video Models > Wan [Wan - Animate Move](https://docs.kie.ai/market/wan/2-2-animate-move.md): Content generation using Wan's advanced AI model
+- Video Models > Wan [Wan - Animate Replace](https://docs.kie.ai/market/wan/2-2-animate-replace.md): Content generation using Wan's advanced AI model
+- Video Models > Wan [Wan - 2.6-flash-image-to-video](https://docs.kie.ai/market/wan/2-6-flash-image-to-video.md): > Transform images into dynamic videos powered by Wan's advanced AI model
+- Video Models > Wan [Wan - 2-6-flash-video-to-video](https://docs.kie.ai/market/wan/2-6-flash-video-to-video.md): > Content generation using wan/2-6-flash-video-to-video
+- Video Models > Topaz [Topaz - Video Upscale](https://docs.kie.ai/market/topaz/video-upscale.md): Enhance video resolution and quality using advanced AI upscaling powered by Topaz
+- Video Models > Infinitalk [Infinitalk - From Audio](https://docs.kie.ai/market/infinitalk/from-audio.md): Content generation using infinitalk/from-audio
+- Video Models > Runway API > Aleph [Generate Aleph Video](https://docs.kie.ai/runway-api/generate-aleph-video.md): > Using Runway Aleph model for video-to-video conversion to create dynamic AI-generated videos
+- Video Models > Runway API > Aleph [Get Aleph Video Details](https://docs.kie.ai/runway-api/get-aleph-video-details.md): > Retrieving comprehensive information about Runway Alpeh video generation tasks
+- Video Models > Runway API [Generate AI Video](https://docs.kie.ai/runway-api/generate-ai-video.md): Create dynamic AI-generated videos from text prompts or image references.
+- Video Models > Runway API [Get AI Video Details](https://docs.kie.ai/runway-api/get-ai-video-details.md): Retrieve comprehensive information about an AI-generated video task.
+- Video Models > Runway API [Extend AI Video](https://docs.kie.ai/runway-api/extend-ai-video.md): Extend existing AI-generated videos to create longer sequences.
+- Music Models > Elevelalbs [elevenlabs/text-to-dialogue-v3](https://docs.kie.ai/market/elevenlabs/text-to-dialogue-v3.md): Dialogue text-to-speech generation using elevenlabs/text-to-dialogue-v3
+- Music Models > Elevelalbs [elevenlabs/text-to-speech-turbo-2-5](https://docs.kie.ai/market/elevenlabs/text-to-speech-turbo-2-5.md): Content generation using elevenlabs/text-to-speech-turbo-2-5
+- Music Models > Elevelalbs [elevenlabs/text-to-speech-multilingual-v2](https://docs.kie.ai/market/elevenlabs/text-to-speech-multilingual-v2.md): Content generation using elevenlabs/text-to-speech-multilingual-v2
+- Music Models > Elevelalbs [elevenlabs/speech-to-text](https://docs.kie.ai/market/elevenlabs/speech-to-text.md): Content generation using elevenlabs/speech-to-text
+- Music Models > Elevelalbs [elevenlabs/sound-effect-v2](https://docs.kie.ai/market/elevenlabs/sound-effect-v2.md): Content generation using elevenlabs/sound-effect-v2
+- Music Models > Elevelalbs [elevenlabs/audio-isolation](https://docs.kie.ai/market/elevenlabs/audio-isolation.md): Content generation using elevenlabs/audio-isolation
+- Chat  Models > GPT [GPT-5-2](https://docs.kie.ai/market/chat/gpt-5-2.md): > GPT-5-2 API is a next-generation multimodal model with exceptional reasoning capabilities, supporting text and image inputs with Web Search grounding and adjustable reasoning effort.
+- Chat  Models > Claude [Claude Sonnet 4.5](https://docs.kie.ai/market/claude/claude-sonnet-4-5.md): ### Streaming Support
+- Chat  Models > Claude [Claude Opus 4.5](https://docs.kie.ai/market/claude/claude-opus-4-5.md): ### Streaming Support
+- Chat  Models > Gemini [Gemini 3 Pro](https://docs.kie.ai/market/gemini/gemini-3-pro.md): ### Streaming Support
+- Chat  Models > Gemini [Gemini 2.5 Flash](https://docs.kie.ai/market/gemini/gemini-2-5-flash.md): ### Streaming Support
+- Chat  Models > Gemini [Gemini  2.5 Pro](https://docs.kie.ai/market/gemini/gemini-2-5-pro.md): ### Streaming Support
+- Veo3.1 API [Generate Veo3.1 Video](https://docs.kie.ai/veo3-api/generate-veo-3-video.md): ::: info[]
+- Veo3.1 API [Extend Veo3.1 Video](https://docs.kie.ai/veo3-api/extend-video.md): ::: info[]
+- Veo3.1 API [Get 1080P Video](https://docs.kie.ai/veo3-api/get-veo-3-1080-p-video.md): ::: info[]
+- Veo3.1 API [Get 4K Video](https://docs.kie.ai/veo3-api/get-veo-3-4k-video.md): ::: info[]
+- Veo3.1 API [Get Veo3.1 Video Details](https://docs.kie.ai/veo3-api/get-veo-3-video-details.md): 
+- Suno API > Music Generation [Generate Music](https://docs.kie.ai/suno-api/generate-music.md): Generate music with or without lyrics using AI models.
+- Suno API > Music Generation [Extend Music](https://docs.kie.ai/suno-api/extend-music.md): Extend or modify existing music by creating a continuation based on a source audio track.
+- Suno API > Music Generation [Upload And Cover Audio](https://docs.kie.ai/suno-api/upload-and-cover-audio.md): > This API creates a cover version of an audio track by transforming it into a new style while retaining its core melody. It incorporates Suno's upload capability, enabling users to upload an audio file for processing. The expected result is a refreshed audio track with a new style, keeping the original melody intact.
+- Suno API > Music Generation [Upload And Extend Audio](https://docs.kie.ai/suno-api/upload-and-extend-audio.md): > This API extends audio tracks while preserving their original style. It includes Suno's upload functionality, allowing users to upload audio files for processing. The expected result is a longer track that seamlessly continues the input style.
+- Suno API > Music Generation [Add Instrumental to Music](https://docs.kie.ai/suno-api/add-instrumental.md): Generate instrumental accompaniment based on uploaded audio files. This interface allows you to upload audio files and add instrumental tracks to them.
+- Suno API > Music Generation [Add Vocals to Music](https://docs.kie.ai/suno-api/add-vocals.md): Generate music with vocals based on uploaded audio files. This interface allows you to upload audio files and add vocal singing to them.
+- Suno API > Music Generation [Get Music Task Details](https://docs.kie.ai/suno-api/get-music-details.md): Retrieve detailed information about a music generation task.
+- Suno API > Music Generation [Get Timestamped Lyrics](https://docs.kie.ai/suno-api/get-timestamped-lyrics.md): Retrieve synchronized lyrics with precise timestamps for music tracks.
+- Suno API > Music Generation [Boost Music Style](https://docs.kie.ai/suno-api/boost-music-style.md): 
+- Suno API > Music Generation [Generate Music Cover](https://docs.kie.ai/suno-api/cover-suno.md): Generate personalized cover images based on original music tasks.
+- Suno API > Music Generation [Get Cover Generation Details](https://docs.kie.ai/suno-api/get-cover-suno-details.md): Get detailed information about Cover generation tasks.
+- Suno API > Music Generation [Replace Music Section](https://docs.kie.ai/suno-api/replace-section.md): > Replace a specific time segment within existing music.
+- Suno API > Music Generation [Generate Persona](https://docs.kie.ai/suno-api/generate-persona.md): 
+- Suno API > Music Generation [Generate Mashup Music](https://docs.kie.ai/suno-api/generate-mashup.md): > Create remix music using AI models by combining multiple audio tracks.
+- Suno API > Lyrics Generation [Generate Lyrics](https://docs.kie.ai/suno-api/generate-lyrics.md): Generate creative lyrics content based on a text prompt.
+- Suno API > Lyrics Generation [Get Lyrics Task Details](https://docs.kie.ai/suno-api/get-lyrics-details.md): Retrieve detailed information about a lyrics generation task.
+- Suno API > WAV Conversion [Convert to WAV Format](https://docs.kie.ai/suno-api/convert-to-wav.md): Convert an existing music track to high-quality WAV format.
+- Suno API > WAV Conversion [Get WAV Conversion Details](https://docs.kie.ai/suno-api/get-wav-details.md): Retrieve detailed information about a WAV format conversion task.
+- Suno API > Vocal Removal [Vocal & Instrument Stem Separation](https://docs.kie.ai/suno-api/separate-vocals.md): Separate music into vocal, instrumental, and individual instrument tracks using advanced audio processing technology.
+- Suno API > Vocal Removal [Get Vocal Separation Details](https://docs.kie.ai/suno-api/get-vocal-separation-details.md): Retrieve detailed information about a vocal separation task.
+- Suno API > Vocal Removal [Generate MIDI from Audio](https://docs.kie.ai/suno-api/generate-midi.md): > Convert separated audio tracks into MIDI format with detailed note information for each instrument.
+- Suno API > Vocal Removal [Get MIDI Generation Details](https://docs.kie.ai/suno-api/get-midi-details.md): Retrieve detailed information about a MIDI generation task including complete note data for all detected instruments.
+- Suno API > Music Video Generation [Create Music Video](https://docs.kie.ai/suno-api/create-music-video.md): Create a video with visualizations based on your generated music track.
+- Suno API > Music Video Generation [Get Music Video Details](https://docs.kie.ai/suno-api/get-music-video-details.md): Retrieve detailed information about a music video generation task.
+- [Get Task Details](https://docs.kie.ai/market/common/get-task-detail.md): Query the status and results of any task created in the Market models. This is a unified query interface that works with all models under the Market category.
+- [Base64 File Upload](https://docs.kie.ai/file-upload-api/upload-file-base-64.md): :::info[]
+- [File Stream Upload](https://docs.kie.ai/file-upload-api/upload-file-stream.md): :::info[]
+- [URL File Upload](https://docs.kie.ai/file-upload-api/upload-file-url.md): :::info[]
+- [Get Remaining Credits](https://docs.kie.ai/common-api/get-account-credits.md): :::tip[]
+- [Get Download URL for Generated Files](https://docs.kie.ai/common-api/download-url.md): # Get Download Link for Generated Files
+- Image    Models > Seedream [Seedream3.0 生成图像](https://docs.kie.ai/cn/market/seedream/seedream-v3.md): 基于 Seedream3.0 实现文本到图像生成
+- Image    Models > Seedream [Seedream4.0 文生图](https://docs.kie.ai/cn/market/seedream/seedream-v4-text-to-image.md): 基于 Seedream4.0 先进 AI 模型的高质量写实风格图像生成
+- Image    Models > Seedream [Seedream4.0 图片编辑](https://docs.kie.ai/cn/market/seedream/seedream-v4-edit.md): 基于 Seedream4.0 实现的图像编辑功能
+- Image    Models > Seedream [Seedream4.5 文生图](https://docs.kie.ai/cn/market/seedream/4-5-text-to-image.md): 基于 Seedream 先进 AI 模型的高质量写实风格图像生成
+- Image    Models > Seedream [Seedream4.5 图片编辑](https://docs.kie.ai/cn/market/seedream/4-5-edit.md): 使用 Seedream4.5 进行图片编辑
+- Image    Models > Z-image [使用 z-image 生成内容](https://docs.kie.ai/cn/market/z-image/z-image.md): 使用 z-image 进行图片生成
+- Image    Models > Google [使用 nano-banana-2 生成内容](https://docs.kie.ai/cn/market/google/nanobanana2.md): 基于 Nano Banana 2 模型实现图像生成
+- Image    Models > Google [Google Imagen4 Fast](https://docs.kie.ai/cn/market/google/imagen4-fast.md): 基于 Google imagen4-fast 模型实现图像生成
+- Image    Models > Google [Google Imagen4 Ultra](https://docs.kie.ai/cn/market/google/imagen4-ultra.md): 基于 Google imagen4-ultra 模型实现图像生成
+- Image    Models > Google [Google Imagen4](https://docs.kie.ai/cn/market/google/imagen4.md): 基于 Google imagen4 模型实现图像生成
+- Image    Models > Google [Nano Banana 图片编辑](https://docs.kie.ai/cn/market/google/nano-banana-edit.md): 基于 Google Nano Banana Edit 模型实现图像编辑
+- Image    Models > Google [Google Nano Banana](https://docs.kie.ai/cn/market/google/nano-banana.md): 基于 google/nano-banana 模型实现内容生成
+- Image    Models > Google [Nano Banana Pro 图生图](https://docs.kie.ai/cn/market/google/pro-image-to-image.md): 基于 Nano Banana Pro 模型实现图像生成
+- Image    Models > Flux-2 [Flux-2 Pro 图生图](https://docs.kie.ai/cn/market/flux2/pro-image-to-image.md): 使用 flux-2/pro-image-to-image 进行图像生成
+- Image    Models > Flux-2 [Flux-2 Pro 文生图](https://docs.kie.ai/cn/market/flux2/pro-text-to-image.md): 基于 Flux-2 先进 AI 模型的高质量写实风格图像生成
+- Image    Models > Flux-2 [Flux-2 图生图](https://docs.kie.ai/cn/market/flux2/flex-image-to-image.md): 使用 flux-2/flex-image-to-image 进行图片生成
+- Image    Models > Flux-2 [Flux-2 文生图](https://docs.kie.ai/cn/market/flux2/flex-text-to-image.md): 基于 Flux-2 先进 AI 模型的高质量写实风格图像生成
+- Image    Models > Grok Imagine [Grok Imagine 文生图](https://docs.kie.ai/cn/market/grok-imagine/text-to-image.md): ## 查询任务状态
+- Image    Models > Grok Imagine [Grok Imagine 图生图](https://docs.kie.ai/cn/market/grok-imagine/image-to-image.md): ## 文件上传要求
+- Image    Models > Grok Imagine [放大 Grok Imagine 图像](https://docs.kie.ai/cn/market/grok-imagine/upscale.md): ## 任务ID来源
+- Image    Models > GPT Image [GPT Image1.5 文生图](https://docs.kie.ai/cn/market/gpt-image/1-5-text-to-image.md): ## 概述
+- Image    Models > GPT Image [GPT Image1.5 图生图](https://docs.kie.ai/cn/market/gpt-image/1-5-image-to-image.md): ## 概述
+- Image    Models > Topaz [Topaz 图像优化](https://docs.kie.ai/cn/market/topaz/image-upscale.md): 基于 Topaz 先进的 AI 放大技术，提升图像分辨率与画质
+- Image    Models > Recraft [Recraft 背景移除](https://docs.kie.ai/cn/market/recraft/remove-background.md): 基于 recraft/remove-background 实现图像去背景
+- Image    Models > Recraft [Recraft 图像优化](https://docs.kie.ai/cn/market/recraft/crisp-upscale.md): 基于 Recraft 先进的 AI 放大技术，提升图像分辨率与画质
+- Image    Models > Ideogram [Ideogram V3 图片重构](https://docs.kie.ai/cn/market/ideogram/v3-reframe.md): 基于 ideogram/v3-reframe 实现图像生成
+- Image    Models > Ideogram [Ideogram 角色编辑](https://docs.kie.ai/cn/market/ideogram/character-edit.md): 基于 ideogram/character-edit 模型实现图像生成
+- Image    Models > Ideogram [Ideogram 角色重混](https://docs.kie.ai/cn/market/ideogram/character-remix.md): 基于 ideogram/character-remix 模型实现图像生成
+- Image    Models > Ideogram [Ideogram 角色图像生成](https://docs.kie.ai/cn/market/ideogram/character.md): 基于 ideogram/character 模型实现图像生成
+- Image    Models > Qwen [Qwen 文生图](https://docs.kie.ai/cn/market/qwen/text-to-image.md): 基于通义千问先进 AI 模型，生成高质量写实风格图像
+- Image    Models > Qwen [Qwen 图生图](https://docs.kie.ai/cn/market/qwen/image-to-image.md): 基于通义千问先进 AI 模型实现图像生成
+- Image    Models > Qwen [Qwen 图片编辑](https://docs.kie.ai/cn/market/qwen/image-edit.md): 基于 qwen/image-edit 模型实现图像生成
+- Image    Models > 4o Image API [生成4o图像](https://docs.kie.ai/cn/4o-image-api/generate-4-o-image.md): 创建一个新的4o图像生成任务。生成的图片保存14天，14天后过期。
+- Image    Models > 4o Image API [获取4o图像详情](https://docs.kie.ai/cn/4o-image-api/get-4-o-image-details.md): 通过taskId查询4o图像生成任务的详细信息，包括生成状态、参数和结果等。
+- Image    Models > 4o Image API [获取直接下载URL](https://docs.kie.ai/cn/4o-image-api/get-4-o-image-download-url.md): 将图片URL转换为可直接下载的URL，主要解决直接下载时的跨域问题。返回的URL有效期为20分钟。
+- Image    Models > Flux Kontext API [生成或编辑图像](https://docs.kie.ai/cn/flux-kontext-api/generate-or-edit-image.md): 使用 Flux Kontext AI 模型创建新的图像生成或编辑任务。
+- Image    Models > Flux Kontext API [获取图像详情](https://docs.kie.ai/cn/flux-kontext-api/get-image-details.md): 查询图像生成或编辑任务的状态和结果。
+- Video Models > Grok Imagine [Grok Imagine 文生视频](https://docs.kie.ai/cn/market/grok-imagine/text-to-video.md): ## 查询任务状态
+- Video Models > Grok Imagine [Grok Imagine 图生视频](https://docs.kie.ai/cn/market/grok-imagine/image-to-video.md): ## 查询任务状态
+- Video Models > Kling [Kling-2.6 文生视频](https://docs.kie.ai/cn/market/kling/text-to-video.md): ## 查询任务状态
+- Video Models > Kling [Kling-2.6 图生视频](https://docs.kie.ai/cn/market/kling/image-to-video.md): ## 查询任务状态
+- Video Models > Kling [Kling V2.5 Turbo Pro 图生视频](https://docs.kie.ai/cn/market/kling/v25-turbo-image-to-video-pro.md): ## 查询任务状态
+- Video Models > Kling [Kling V2.5 Turbo Pro 文生视频](https://docs.kie.ai/cn/market/kling/v25-turbo-text-to-video-pro.md): ## 查询任务状态
+- Video Models > Kling [Kling AI Avatar Standard](https://docs.kie.ai/cn/market/kling/ai-avatar-standard.md): ## 查询任务状态
+- Video Models > Kling [Kling AI Avatar Pro](https://docs.kie.ai/cn/market/kling/ai-avatar-pro.md): ## 查询任务状态
+- Video Models > Kling [Kling V2.1 Master 图生视频](https://docs.kie.ai/cn/market/kling/v2-1-master-image-to-video.md): ## 查询任务状态
+- Video Models > Kling [Kling V2.1 Master 文生视频](https://docs.kie.ai/cn/market/kling/v2-1-master-text-to-video.md): ## 查询任务状态
+- Video Models > Kling [Kling V2.1 Pro](https://docs.kie.ai/cn/market/kling/v2-1-pro.md): ## 查询任务状态
+- Video Models > Kling [Kling V2.1 Standard](https://docs.kie.ai/cn/market/kling/v2-1-standard.md): ## 查询任务状态
+- Video Models > Kling [kling-2.6 motion-control](https://docs.kie.ai/cn/market/kling/motion-control.md): ## 文件上传要求
+- Video Models > Kling [Kling 3.0](https://docs.kie.ai/cn/market/kling/kling-3-0.md): 使用 Kling 3.0 AI 模型生成具有高级多镜头功能和元素引用的高质量视频。
+- Video Models > Bytedance [Bytedance Seedance 1.5 Pro](https://docs.kie.ai/cn/market/bytedance/seedance-1-5-pro.md): ## 查询任务状态
+- Video Models > Bytedance [Bytedance V1 Pro Fast 图生视频](https://docs.kie.ai/cn/market/bytedance/v1-pro-fast-image-to-video.md): ## 查询任务状态
+- Video Models > Bytedance [Bytedance V1 Pro 图生视频](https://docs.kie.ai/cn/market/bytedance/v1-pro-image-to-video.md): ## 查询任务状态
+- Video Models > Bytedance [Bytedance V1 Pro 文生视频](https://docs.kie.ai/cn/market/bytedance/v1-pro-text-to-video.md): ## 查询任务状态
+- Video Models > Bytedance [Bytedance V1 Lite 图生视频](https://docs.kie.ai/cn/market/bytedance/v1-lite-image-to-video.md): ## 查询任务状态
+- Video Models > Bytedance [Bytedance V1 Lite 文生视频](https://docs.kie.ai/cn/market/bytedance/v1-lite-text-to-video.md): ## 查询任务状态
+- Video Models > Hailuo [Hailuo 2.3 Pro 图生视频](https://docs.kie.ai/cn/market/hailuo/2-3-image-to-video-pro.md): ## 查询任务状态
+- Video Models > Hailuo [Hailuo 2.3 Standard 图生视频](https://docs.kie.ai/cn/market/hailuo/2-3-image-to-video-standard.md): ## 查询任务状态
+- Video Models > Hailuo [Hailuo Pro 文生视频](https://docs.kie.ai/cn/market/hailuo/02-text-to-video-pro.md): ## 查询任务状态
+- Video Models > Hailuo [Hailuo Pro 图生视频](https://docs.kie.ai/cn/market/hailuo/02-image-to-video-pro.md): ## 查询任务状态
+- Video Models > Hailuo [Hailuo Standard 文生视频](https://docs.kie.ai/cn/market/hailuo/02-text-to-video-standard.md): ## 查询任务状态
+- Video Models > Hailuo [Hailuo Standard 图生视频](https://docs.kie.ai/cn/market/hailuo/02-image-to-video-standard.md): ## 查询任务状态
+- Video Models > Sora2 [Sora2 图生视频](https://docs.kie.ai/cn/market/sora2/sora-2-image-to-video.md): ## 角色动画集成
+- Video Models > Sora2 [Sora2 文生视频](https://docs.kie.ai/cn/market/sora2/sora-2-text-to-video.md): ## 角色动画集成
+- Video Models > Sora2 [Sora2 Pro 图生视频](https://docs.kie.ai/cn/market/sora2/sora-2-pro-image-to-video.md): ## 角色动画集成
+- Video Models > Sora2 [Sora2 Pro 文生视频](https://docs.kie.ai/cn/market/sora2/sora-2-pro-text-to-video.md): ## 角色动画集成
+- Video Models > Sora2 [Sora2 水印移除](https://docs.kie.ai/cn/market/sora2/sora-watermark-remover.md): ## 查询任务状态
+- Video Models > Sora2 [Sora-2 Pro Storyboard](https://docs.kie.ai/cn/market/sora-2-pro-storyboard.md): ## 查询任务状态
+- Video Models > Sora2 [Sora2 - Characters](https://docs.kie.ai/cn/market/sora2/sora-2-characters.md): ## 文件上传要求
+- Video Models > Sora2 [Sora2 - Characters Pro](https://docs.kie.ai/cn/market/sora2/sora-2-characters-pro.md): 创建动态角色动画，使用 Sora-2-characters-pro 高级 AI 模型从现有视频任务中提取角色。
+- Video Models > Wan [Wan 2.6 - 图转视频](https://docs.kie.ai/cn/market/wan/2-6-image-to-video.md): ## 概述
+- Video Models > Wan [Wan 2.6 - 文转视频](https://docs.kie.ai/cn/market/wan/2-6-text-to-video.md): ## 概述
+- Video Models > Wan [Wan 2.6 - 视频转视频](https://docs.kie.ai/cn/market/wan/2-6-video-to-video.md): ## 概述
+- Video Models > Wan [Wan 2.2 A14B Turbo 图生视频](https://docs.kie.ai/cn/market/wan/2-2-a14b-image-to-video-turbo.md): ## 查询任务状态
+- Video Models > Wan [Wan 2.2 A14B Turbo 文生视频](https://docs.kie.ai/cn/market/wan/2-2-a14b-text-to-video-turbo.md): ## 查询任务状态
+- Video Models > Wan [Wan 2.2 A14B Turbo 语音转视频](https://docs.kie.ai/cn/market/wan/2-2-a14b-speech-to-video-turbo.md): ## 查询任务状态
+- Video Models > Wan [Wan 动画移动](https://docs.kie.ai/cn/market/wan/2-2-animate-move.md): ## 查询任务状态
+- Video Models > Wan [Wan 动画替换](https://docs.kie.ai/cn/market/wan/2-2-animate-replace.md): ## 查询任务状态
+- Video Models > Wan [Wan - Flash 图转视频](https://docs.kie.ai/cn/market/wan/2-6-flash-image-to-video.md): > 使用 Wan 先进的 AI 模型将静态图像转换为动态视频
+- Video Models > Wan [Wan - Flash 视频转视频](https://docs.kie.ai/cn/market/wan/2-6-flash-video-to-video.md): > 使用 wan/2-6-flash-video-to-video 进行内容生成
+- Video Models > Topaz [Topaz视频优化](https://docs.kie.ai/cn/market/topaz/video-upscale.md): ## 查询任务状态
+- Video Models > Infinitalk [Infinitalk视频生成](https://docs.kie.ai/cn/market/infinitalk/from-audio.md): ## 查询任务状态
+- Video Models > Runway API > Aleph [生成 Aleph 视频](https://docs.kie.ai/cn/runway-api/generate-aleph-video.md): ## 概述
+- Video Models > Runway API > Aleph [获取 Aleph 视频详情](https://docs.kie.ai/cn/runway-api/get-aleph-video-details.md): ## 概述
+- Video Models > Runway API [生成AI视频](https://docs.kie.ai/cn/runway-api/generate-ai-video.md): 从文本提示或图像参考创建动态AI生成的视频。
+- Video Models > Runway API [获取AI视频详情](https://docs.kie.ai/cn/runway-api/get-ai-video-details.md): 获取AI生成视频任务的详细信息。
+- Video Models > Runway API [延长AI视频](https://docs.kie.ai/cn/runway-api/extend-ai-video.md): 延续现有的AI生成视频以创建更长的序列。
+- Music Models > ElevenLabs [ElevenLabs对话文生语音V3](https://docs.kie.ai/cn/market/elevenlabs/text-to-dialogue-v3.md): ## 查询任务状态
+- Music Models > ElevenLabs [ElevenLabs Turbo 2.5文生语音](https://docs.kie.ai/cn/market/elevenlabs/text-to-speech-turbo-2-5.md): ## 查询任务状态
+- Music Models > ElevenLabs [ElevenLabs文生语音 多语言V2](https://docs.kie.ai/cn/market/elevenlabs/text-to-speech-multilingual-v2.md): ## 查询任务状态
+- Music Models > ElevenLabs [ElevenLabs语音转文字](https://docs.kie.ai/cn/market/elevenlabs/speech-to-text.md): ## 查询任务状态
+- Music Models > ElevenLabs [ElevenLabs音效V2](https://docs.kie.ai/cn/market/elevenlabs/sound-effect-v2.md): ## 查询任务状态
+- Music Models > ElevenLabs [ElevenLabs音频分离](https://docs.kie.ai/cn/market/elevenlabs/audio-isolation.md): ## 查询任务状态
+- Chat  Models > GPT [GPT-5-2](https://docs.kie.ai/cn/market/chat/gpt-5-2.md): > GPT-5-2 API 是新一代多模态模型，具备卓越的推理能力，支持文本和图像输入，提供联网搜索增强功能并支持调节推理力度。
+- Chat  Models > Claude [Claude Sonnet 4.5](https://docs.kie.ai/cn/market/claude/claude-sonnet-4-5.md): ### 流式响应支持
+- Chat  Models > Claude [Claude Opus 4.5](https://docs.kie.ai/cn/market/claude/claude-opus-4-5.md): ### 流式响应支持
+- Chat  Models > Gemini [Gemini 3 Pro](https://docs.kie.ai/cn/market/gemini/gemini-3-pro.md): ### 流式响应支持
+- Chat  Models > Gemini [Gemini 2.5 Flash](https://docs.kie.ai/cn/market/gemini/gemini-2-5-flash.md): ### 流式响应支持
+- Chat  Models > Gemini [Gemini 2.5 Pro](https://docs.kie.ai/cn/market/gemini/gemini-2-5-pro.md): ### 流式响应支持
+- Veo3.1 API [生成veo3.1视频](https://docs.kie.ai/cn/veo3-api/generate-veo-3-video.md): ::: info[]
+- Veo3.1 API [扩展veo3.1视频](https://docs.kie.ai/cn/veo3-api/extend-video.md): ::: info[]
+- Veo3.1 API [获取1080P视频](https://docs.kie.ai/cn/veo3-api/get-veo-3-1080-p-video.md): ::: info[]
+- Veo3.1 API [获取4K视频](https://docs.kie.ai/cn/veo3-api/get-veo-3-4k-video.md): ::: info[]
+- Veo3.1 API [查询veo3.1视频详情](https://docs.kie.ai/cn/veo3-api/get-veo-3-video-details.md): ::: info[]
+- Suno API > Music Generation [生成音乐](https://docs.kie.ai/cn/suno-api/generate-music.md): 
+- Suno API > Music Generation [延长音乐](https://docs.kie.ai/cn/suno-api/extend-music.md): 通过基于源音频创建续曲来延长或修改现有音乐。
+- Suno API > Music Generation [上传并翻唱音乐](https://docs.kie.ai/cn/suno-api/upload-and-cover-audio.md): # 覆盖音乐样式
+- Suno API > Music Generation [上传并扩展音乐](https://docs.kie.ai/cn/suno-api/upload-and-extend-audio.md): # 上传并扩展音乐
+- Suno API > Music Generation [添加伴奏生成音乐](https://docs.kie.ai/cn/suno-api/add-instrumental.md): 基于上传的音频文件生成伴奏音乐。此接口允许您上传音频文件并为其添加伴奏音轨。
+- Suno API > Music Generation [添加人声生成音乐](https://docs.kie.ai/cn/suno-api/add-vocals.md): 基于上传的音频文件生成带人声的音乐。此接口允许您上传音频文件并为其添加人声演唱。
+- Suno API > Music Generation [获取音乐任务详情](https://docs.kie.ai/cn/suno-api/get-music-details.md): 获取音乐生成任务的详细信息。
+- Suno API > Music Generation [获取带时间戳的歌词](https://docs.kie.ai/cn/suno-api/get-timestamped-lyrics.md): 获取音乐曲目的带精确时间戳的同步歌词。
+- Suno API > Music Generation [提升音乐风格](https://docs.kie.ai/cn/suno-api/boost-music-style.md): 这是V4\_5的独特功能。V4\_5的风格功能已经得到显著增强，正如官方网站所述：
+- Suno API > Music Generation [生成音乐封面](https://docs.kie.ai/cn/suno-api/cover-suno.md): > 为已生成的音乐创建个性化封面图片。
+- Suno API > Music Generation [获取音乐封面生成详情](https://docs.kie.ai/cn/suno-api/get-cover-suno-details.md): 
+- Suno API > Music Generation [替换音乐分区](https://docs.kie.ai/cn/suno-api/replace-section.md): > 替换现有音乐的指定时间段。
+- Suno API > Music Generation [生成 Persona](https://docs.kie.ai/cn/suno-api/generate-persona.md): > 基于已生成的音乐创建个性化的音乐 Persona，为音乐赋予独特的身份和特征。
+- Suno API > Music Generation [生成混音音乐](https://docs.kie.ai/cn/suno-api/generate-mashup.md): > 使用AI模型通过组合多个音频轨道创建混音音乐。
+- Suno API > Lyrics Generation [生成歌词](https://docs.kie.ai/cn/suno-api/generate-lyrics.md): 根据文本提示生成创意歌词内容。
+- Suno API > Lyrics Generation [获取歌词任务详情](https://docs.kie.ai/cn/suno-api/get-lyrics-details.md): > 获取歌词生成任务的详细信息。
+- Suno API > WAV Conversion [转换为WAV格式](https://docs.kie.ai/cn/suno-api/convert-to-wav.md): 将现有音乐曲目转换为高质量WAV格式。
+- Suno API > WAV Conversion [获取WAV转换详情](https://docs.kie.ai/cn/suno-api/get-wav-details.md): 获取WAV格式转换任务的详细信息。
+- Suno API > Vocal Removal [人声和乐器分离](https://docs.kie.ai/cn/suno-api/separate-vocals.md): 使用先进的音频处理技术将音乐分离为人声、伴奏和单个乐器轨道。
+- Suno API > Vocal Removal [获取人声和乐器分离详情](https://docs.kie.ai/cn/suno-api/get-vocal-separation-details.md): 获取人声分离任务的详细信息。
+- Suno API > Vocal Removal [从音频生成 MIDI](https://docs.kie.ai/cn/suno-api/generate-midi.md): 将分离后的音轨转换为 MIDI 格式，为每个乐器提供详细的音符信息。
+- Suno API > Vocal Removal [获取 MIDI 生成详情](https://docs.kie.ai/cn/suno-api/get-midi-details.md): 检索 MIDI 生成任务的详细信息,包括所有检测到的乐器的完整音符数据。
+- Suno API > Music Video Generation [创建音乐视频](https://docs.kie.ai/cn/suno-api/create-music-video.md): 基于您生成的音乐曲目创建带有可视化效果的视频。
+- Suno API > Music Video Generation [获取音乐视频详情](https://docs.kie.ai/cn/suno-api/get-music-video-details.md): 获取音乐视频生成任务的详细信息。
+- [获取任务详情](https://docs.kie.ai/cn/market/common/get-task-detail.md): ## 概述
+- [Base64 文件上传](https://docs.kie.ai/cn/file-upload-api/upload-file-base-64.md): :::info[]
+- [文件流上传](https://docs.kie.ai/cn/file-upload-api/upload-file-stream.md): :::info[]
+- [URL 文件上传](https://docs.kie.ai/cn/file-upload-api/upload-file-url.md): :::info[]
+- [获取剩余积分](https://docs.kie.ai/cn/common-api/get-account-credits.md): 
+- [获取生成文件的下载链接](https://docs.kie.ai/cn/common-api/download-url.md): :::tip[]

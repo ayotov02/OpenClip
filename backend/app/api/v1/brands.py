@@ -48,9 +48,12 @@ async def update_kit(
     user: User = Depends(get_current_user),
     db: AsyncSession = Depends(get_db),
 ):
-    kit = await svc.update_brand_kit(db, kit_id, data)
-    if not kit:
+    existing = await svc.get_brand_kit(db, kit_id)
+    if not existing:
         raise HTTPException(status_code=404, detail="Brand kit not found")
+    if existing.user_id != user.id:
+        raise HTTPException(status_code=403, detail="Not authorized")
+    kit = await svc.update_brand_kit(db, kit_id, data)
     return kit
 
 
@@ -60,5 +63,9 @@ async def delete_kit(
     user: User = Depends(get_current_user),
     db: AsyncSession = Depends(get_db),
 ):
-    if not await svc.delete_brand_kit(db, kit_id):
+    existing = await svc.get_brand_kit(db, kit_id)
+    if not existing:
         raise HTTPException(status_code=404, detail="Brand kit not found")
+    if existing.user_id != user.id:
+        raise HTTPException(status_code=403, detail="Not authorized")
+    await svc.delete_brand_kit(db, kit_id)

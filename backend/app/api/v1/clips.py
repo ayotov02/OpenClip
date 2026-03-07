@@ -8,6 +8,7 @@ from app.core.dependencies import get_current_user
 from app.models.user import User
 from app.schemas.clip import ClipGenerateRequest, ClipResponse, ClipUpdate
 from app.services import clip_service as svc
+from app.services import job_service
 
 router = APIRouter(tags=["clips"])
 
@@ -28,8 +29,33 @@ async def generate_clips(
     user: User = Depends(get_current_user),
     db: AsyncSession = Depends(get_db),
 ):
-    # TODO: dispatch Celery task for clip generation pipeline
-    return {"message": "Clip generation started", "project_id": str(project_id)}
+    from app.services import project_service
+
+    project = await project_service.get_project(db, project_id)
+    if not project:
+        raise HTTPException(status_code=404, detail="Project not found")
+    if project.user_id != user.id:
+        raise HTTPException(status_code=403, detail="Not authorized")
+
+    from app.tasks.video_tasks import orchestrate_clip_pipeline
+
+    job = await job_service.create_job(
+        db,
+        user_id=user.id,
+        job_type="clip_generation",
+        metadata={"project_id": str(project_id)},
+    )
+
+    task = orchestrate_clip_pipeline.delay(str(project_id), str(job.id))
+    job.celery_task_id = task.id
+    await db.commit()
+
+    return {
+        "message": "Clip generation pipeline started",
+        "project_id": str(project_id),
+        "job_id": str(job.id),
+        "celery_task_id": task.id,
+    }
 
 
 @router.get("/clips/{clip_id}", response_model=ClipResponse)
@@ -51,9 +77,10 @@ async def update_clip(
     user: User = Depends(get_current_user),
     db: AsyncSession = Depends(get_db),
 ):
-    clip = await svc.update_clip(db, clip_id, data)
+    clip = await svc.get_clip(db, clip_id)
     if not clip:
         raise HTTPException(status_code=404, detail="Clip not found")
+    clip = await svc.update_clip(db, clip_id, data)
     return clip
 
 

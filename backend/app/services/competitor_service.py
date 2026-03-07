@@ -28,6 +28,15 @@ async def get_competitors(
     return list(result.scalars().all())
 
 
+async def get_competitor(
+    db: AsyncSession, comp_id: uuid.UUID
+) -> Competitor | None:
+    result = await db.execute(
+        select(Competitor).where(Competitor.id == comp_id)
+    )
+    return result.scalar_one_or_none()
+
+
 async def delete_competitor(db: AsyncSession, comp_id: uuid.UUID) -> bool:
     result = await db.execute(
         select(Competitor).where(Competitor.id == comp_id)

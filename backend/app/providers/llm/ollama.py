@@ -90,7 +90,7 @@ class OllamaLLM(LLMProvider):
     async def score_clips(self, transcript: str, brand_ctx: object) -> list[dict]:
         from app.brand.prompt_builder import build_clip_scoring_prompt
 
-        system_prompt, user_prompt = build_clip_scoring_prompt(transcript, brand_ctx)
+        system_prompt, user_prompt = build_clip_scoring_prompt(brand_ctx, transcript)
         messages = [
             {"role": "system", "content": system_prompt},
             {"role": "user", "content": user_prompt},
@@ -158,7 +158,7 @@ class OllamaLLM(LLMProvider):
         from app.brand.prompt_builder import build_publish_copy_prompt
 
         system_prompt, user_prompt = build_publish_copy_prompt(
-            clip_title, transcript, platform, brand_ctx
+            brand_ctx, clip_title, transcript, platform
         )
         messages = [
             {"role": "system", "content": system_prompt},

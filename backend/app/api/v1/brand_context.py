@@ -39,7 +39,7 @@ async def get_context(
     user: User = Depends(get_current_user),
     db: AsyncSession = Depends(get_db),
 ):
-    ctx = await svc.update_brand_context(db, context_id, BrandContextUpdate())
+    ctx = await svc.get_brand_context(db, context_id)
     if not ctx or ctx.user_id != user.id:
         raise HTTPException(status_code=404, detail="Brand context not found")
     return ctx
@@ -52,9 +52,12 @@ async def update(
     user: User = Depends(get_current_user),
     db: AsyncSession = Depends(get_db),
 ):
-    ctx = await svc.update_brand_context(db, context_id, data)
-    if not ctx or ctx.user_id != user.id:
+    existing = await svc.get_brand_context(db, context_id)
+    if not existing:
         raise HTTPException(status_code=404, detail="Brand context not found")
+    if existing.user_id != user.id:
+        raise HTTPException(status_code=403, detail="Not authorized")
+    ctx = await svc.update_brand_context(db, context_id, data)
     return ctx
 
 
@@ -64,5 +67,9 @@ async def delete(
     user: User = Depends(get_current_user),
     db: AsyncSession = Depends(get_db),
 ):
-    if not await svc.delete_brand_context(db, context_id):
+    existing = await svc.get_brand_context(db, context_id)
+    if not existing:
         raise HTTPException(status_code=404, detail="Brand context not found")
+    if existing.user_id != user.id:
+        raise HTTPException(status_code=403, detail="Not authorized")
+    await svc.delete_brand_context(db, context_id)

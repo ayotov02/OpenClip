@@ -34,6 +34,15 @@ async def get_brand_contexts(
     return list(result.scalars().all())
 
 
+async def get_brand_context(
+    db: AsyncSession, context_id: uuid.UUID
+) -> BrandContext | None:
+    result = await db.execute(
+        select(BrandContext).where(BrandContext.id == context_id)
+    )
+    return result.scalar_one_or_none()
+
+
 async def update_brand_context(
     db: AsyncSession, context_id: uuid.UUID, data: BrandContextUpdate
 ) -> BrandContext | None:

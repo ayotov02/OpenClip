@@ -8,6 +8,7 @@ from app.core.dependencies import get_current_user
 from app.models.user import User
 from app.schemas.competitor import CompetitorCreate, CompetitorMetricResponse, CompetitorResponse
 from app.services import competitor_service as svc
+from app.services import job_service
 
 router = APIRouter(prefix="/competitors", tags=["competitors"])
 
@@ -54,5 +55,26 @@ async def scrape(
     user: User = Depends(get_current_user),
     db: AsyncSession = Depends(get_db),
 ):
-    # TODO: dispatch scrape task
-    return {"message": "Scrape started", "competitor_id": str(comp_id)}
+    competitor = await svc.get_competitor(db, comp_id)
+    if not competitor:
+        raise HTTPException(status_code=404, detail="Competitor not found")
+    if competitor.user_id != user.id:
+        raise HTTPException(status_code=403, detail="Not authorized")
+
+    from app.tasks.scrape_tasks import scrape_profile
+
+    task = scrape_profile.delay(str(comp_id))
+
+    job = await job_service.create_job(
+        db,
+        user_id=user.id,
+        job_type="competitor_scrape",
+        celery_task_id=task.id,
+        metadata={"competitor_id": str(comp_id)},
+    )
+
+    return {
+        "message": "Scrape started",
+        "competitor_id": str(comp_id),
+        "job_id": str(job.id),
+    }

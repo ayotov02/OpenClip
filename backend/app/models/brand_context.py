@@ -37,3 +37,8 @@ class BrandContext(Base):
     )
 
     user = relationship("User", back_populates="brand_contexts")
+
+    def to_system_prompt(self) -> str:
+        from app.brand.prompt_builder import build_brand_system_prompt
+
+        return build_brand_system_prompt(self)

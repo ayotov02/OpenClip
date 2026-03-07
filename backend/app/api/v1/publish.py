@@ -36,9 +36,12 @@ async def update_job(
     user: User = Depends(get_current_user),
     db: AsyncSession = Depends(get_db),
 ):
-    job = await svc.update_publish_job(db, job_id, data)
-    if not job:
+    existing = await svc.get_publish_job(db, job_id)
+    if not existing:
         raise HTTPException(status_code=404, detail="Publish job not found")
+    if existing.user_id != user.id:
+        raise HTTPException(status_code=403, detail="Not authorized")
+    job = await svc.update_publish_job(db, job_id, data)
     return job
 
 
@@ -48,5 +51,9 @@ async def delete_job(
     user: User = Depends(get_current_user),
     db: AsyncSession = Depends(get_db),
 ):
-    if not await svc.delete_publish_job(db, job_id):
+    existing = await svc.get_publish_job(db, job_id)
+    if not existing:
         raise HTTPException(status_code=404, detail="Publish job not found")
+    if existing.user_id != user.id:
+        raise HTTPException(status_code=403, detail="Not authorized")
+    await svc.delete_publish_job(db, job_id)

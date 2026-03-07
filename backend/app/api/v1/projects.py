@@ -51,9 +51,12 @@ async def update_project(
     user: User = Depends(get_current_user),
     db: AsyncSession = Depends(get_db),
 ):
-    project = await svc.update_project(db, project_id, data)
-    if not project or project.user_id != user.id:
+    existing = await svc.get_project(db, project_id)
+    if not existing:
         raise HTTPException(status_code=404, detail="Project not found")
+    if existing.user_id != user.id:
+        raise HTTPException(status_code=403, detail="Not authorized")
+    project = await svc.update_project(db, project_id, data)
     return project
 
 
@@ -63,5 +66,9 @@ async def delete_project(
     user: User = Depends(get_current_user),
     db: AsyncSession = Depends(get_db),
 ):
-    if not await svc.delete_project(db, project_id):
+    existing = await svc.get_project(db, project_id)
+    if not existing:
         raise HTTPException(status_code=404, detail="Project not found")
+    if existing.user_id != user.id:
+        raise HTTPException(status_code=403, detail="Not authorized")
+    await svc.delete_project(db, project_id)

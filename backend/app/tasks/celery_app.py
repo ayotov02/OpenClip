@@ -1,4 +1,7 @@
+import asyncio
+
 from celery import Celery
+from celery.signals import worker_process_init
 
 from app.core.config import settings
 
@@ -30,3 +33,16 @@ celery.conf.update(
     task_time_limit=1800,
     task_soft_time_limit=1500,
 )
+
+
+@worker_process_init.connect
+def dispose_db_pool_after_fork(**kwargs):
+    """Dispose inherited SQLAlchemy connection pool after Celery prefork.
+
+    When Celery forks worker processes, the child inherits the parent's
+    DB connection pool. These connections are invalid in the child and
+    will cause errors. Disposing forces fresh connections per worker.
+    """
+    from app.core.database import engine
+
+    asyncio.run(engine.dispose())

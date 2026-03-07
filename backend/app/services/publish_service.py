@@ -38,6 +38,15 @@ async def get_publish_jobs(
     return list(result.scalars().all())
 
 
+async def get_publish_job(
+    db: AsyncSession, job_id: uuid.UUID
+) -> PublishJob | None:
+    result = await db.execute(
+        select(PublishJob).where(PublishJob.id == job_id)
+    )
+    return result.scalar_one_or_none()
+
+
 async def update_publish_job(
     db: AsyncSession, job_id: uuid.UUID, data: PublishJobUpdate
 ) -> PublishJob | None:
