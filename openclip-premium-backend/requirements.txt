@@ -1,0 +1,13 @@
+fastapi==0.115.12
+uvicorn[standard]==0.34.2
+pydantic==2.11.1
+pydantic-settings==2.8.1
+sqlalchemy[asyncio]==2.0.40
+asyncpg==0.30.0
+alembic==1.15.1
+redis==5.2.1
+celery==5.4.0
+minio==7.2.15
+httpx==0.28.1
+python-multipart==0.0.20
+clerk-backend-api==1.7.1
