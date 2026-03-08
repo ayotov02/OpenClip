@@ -12,3 +12,4 @@ httpx==0.28.1
 python-multipart==0.0.20
 PyJWT==2.10.1
 passlib[bcrypt]==1.7.4
+gunicorn==23.0.0

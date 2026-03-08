@@ -1,23 +1,50 @@
 services:
+  caddy:
+    image: caddy:2-alpine
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile
+      - ./certs:/etc/caddy/certs:ro
+      - caddy_data:/data
+    depends_on:
+      api:
+        condition: service_healthy
+    restart: unless-stopped
+
   api:
     build: .
-    ports:
-      - "8000:8000"
     env_file: .env
+    environment:
+      DATABASE_URL: postgresql+asyncpg://openclip:${POSTGRES_PASSWORD:-password}@postgres:5432/openclip
+      REDIS_URL: redis://:${REDIS_PASSWORD:-openclip}@redis:6379/0
+      MINIO_ENDPOINT: minio:9000
+      OLLAMA_BASE_URL: http://ollama:11434
     depends_on:
       postgres:
         condition: service_healthy
       redis:
         condition: service_healthy
       minio:
-        condition: service_started
-    volumes:
-      - ./app:/app/app
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+    restart: unless-stopped
 
   worker:
     build: .
     command: celery -A app.tasks.celery_app worker -l info -Q default,video,ai,publish,scrape
     env_file: .env
+    environment:
+      DATABASE_URL: postgresql+asyncpg://openclip:${POSTGRES_PASSWORD:-password}@postgres:5432/openclip
+      REDIS_URL: redis://:${REDIS_PASSWORD:-openclip}@redis:6379/0
+      MINIO_ENDPOINT: minio:9000
+      OLLAMA_BASE_URL: http://ollama:11434
     depends_on:
       postgres:
         condition: service_healthy
@@ -30,11 +57,13 @@ services:
             - driver: nvidia
               count: all
               capabilities: [gpu]
+    init: true
+    restart: unless-stopped
+    volumes:
+      - worker_tmp:/tmp
 
   ollama:
     image: ollama/ollama:latest
-    ports:
-      - "11434:11434"
     volumes:
       - ollama_data:/root/.ollama
     deploy:
@@ -44,15 +73,19 @@ services:
             - driver: nvidia
               count: all
               capabilities: [gpu]
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:11434/api/tags"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
 
   postgres:
     image: postgres:16-alpine
     environment:
       POSTGRES_USER: openclip
-      POSTGRES_PASSWORD: password
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-password}
       POSTGRES_DB: openclip
-    ports:
-      - "5432:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
     healthcheck:
@@ -60,33 +93,39 @@ services:
       interval: 5s
       timeout: 5s
       retries: 5
+    restart: unless-stopped
 
   redis:
     image: redis:7-alpine
-    ports:
-      - "6379:6379"
+    command: redis-server --requirepass ${REDIS_PASSWORD:-openclip}
     volumes:
       - redis_data:/data
     healthcheck:
-      test: ["CMD", "redis-cli", "ping"]
+      test: ["CMD", "redis-cli", "-a", "${REDIS_PASSWORD:-openclip}", "ping"]
       interval: 5s
       timeout: 5s
       retries: 5
+    restart: unless-stopped
 
   minio:
     image: minio/minio:latest
     command: server /data --console-address ":9001"
     environment:
-      MINIO_ROOT_USER: openclip
-      MINIO_ROOT_PASSWORD: openclip-secret
-    ports:
-      - "9000:9000"
-      - "9001:9001"
+      MINIO_ROOT_USER: ${MINIO_ACCESS_KEY:-openclip}
+      MINIO_ROOT_PASSWORD: ${MINIO_SECRET_KEY:-openclip-secret}
     volumes:
       - minio_data:/data
+    healthcheck:
+      test: ["CMD", "mc", "ready", "local"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
 
 volumes:
   postgres_data:
   redis_data:
   minio_data:
   ollama_data:
+  caddy_data:
+  worker_tmp:

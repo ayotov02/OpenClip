@@ -11,3 +11,4 @@ minio==7.2.15
 httpx==0.28.1
 python-multipart==0.0.20
 clerk-backend-api==1.7.1
+gunicorn==23.0.0

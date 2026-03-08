@@ -1,0 +1,16 @@
+.env
+.env.*
+!.env.example
+__pycache__
+*.pyc
+.git
+.venv
+.mypy_cache
+.pytest_cache
+.ruff_cache
+tests/
+*.md
+docker-compose*.yml
+Caddyfile
+certs/
+setup.sh

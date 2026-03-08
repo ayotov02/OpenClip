@@ -8,7 +8,12 @@ class Settings(BaseSettings):
     APP_MODE: str = "premium"
     APP_VERSION: str = "0.1.0"
     DEBUG: bool = False
+    DOMAIN: str = "openclip.local"
     CORS_ORIGINS: list[str] = ["http://localhost:3000"]
+
+    # Credentials (used by docker-compose for service config)
+    POSTGRES_PASSWORD: str = "password"
+    REDIS_PASSWORD: str = "openclip"
 
     # Database
     DATABASE_URL: str = "postgresql+asyncpg://openclip:password@localhost:5432/openclip"
