@@ -24,6 +24,8 @@ celery.conf.update(
         "app.tasks.faceless_tasks.*": {"queue": "video"},
         "app.tasks.publish_tasks.*": {"queue": "publish"},
         "app.tasks.scrape_tasks.*": {"queue": "scrape"},
+        "app.tasks.spy_tasks.*": {"queue": "scrape"},
+        "app.tasks.discovery_tasks.*": {"queue": "scrape"},
         "app.tasks.batch_tasks.*": {"queue": "default"},
     },
     task_default_queue="default",

@@ -110,6 +110,19 @@ class ScrapingProvider(ABC):
     @abstractmethod
     async def search_web(self, query: str, limit: int = 10) -> list[dict]: ...
 
+    async def search_platform(
+        self, platform: str, query: str, limit: int = 10
+    ) -> list[dict]:
+        """Search a specific platform. Default uses search_web with site: filter."""
+        domain = {
+            "youtube": "youtube.com",
+            "tiktok": "tiktok.com",
+            "instagram": "instagram.com",
+            "reddit": "reddit.com",
+            "twitter": "x.com",
+        }.get(platform, f"{platform}.com")
+        return await self.search_web(f"{query} site:{domain}", limit=limit)
+
 
 class UpscalingProvider(ABC):
     @abstractmethod

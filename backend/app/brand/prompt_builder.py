@@ -43,3 +43,80 @@ def build_publish_copy_prompt(
         "Return JSON: {\"title\": str, \"description\": str, \"hashtags\": [str]}"
     )
     return system_prompt, user_prompt
+
+
+def build_post_analysis_prompt(
+    brand_ctx: object | None,
+    caption: str,
+    platform: str,
+    post_type: str,
+    engagement_rate: float,
+    likes: int,
+    views: int,
+) -> tuple[str, str]:
+    if brand_ctx and hasattr(brand_ctx, "brand_name"):
+        system_prompt = (
+            build_brand_system_prompt(brand_ctx)
+            + "\n\nYou are also a content intelligence analyst. "
+            "Analyze competitor content to extract actionable insights."
+        )
+        niche_ref = f" in the {brand_ctx.niche} niche"
+    else:
+        system_prompt = (
+            "You are a content intelligence analyst specializing in social media. "
+            "Analyze content to extract actionable insights for creators."
+        )
+        niche_ref = ""
+
+    user_prompt = (
+        f"Analyze this {platform} {post_type}{niche_ref}.\n\n"
+        f"Caption/Text:\n{caption}\n\n"
+        f"Metrics: {likes:,} likes, {views:,} views, {engagement_rate:.2%} ER\n\n"
+        "Score each dimension 0-100 and extract key elements.\n"
+        "Return JSON:\n"
+        "{\n"
+        '  "hook_score": float,\n'
+        '  "body_score": float,\n'
+        '  "cta_score": float,\n'
+        '  "extracted_hook": "the opening hook text or description",\n'
+        '  "extracted_cta": "the call-to-action text",\n'
+        '  "content_category": "educational|entertainment|promotional|storytelling|tutorial",\n'
+        '  "sentiment": "positive|negative|neutral",\n'
+        '  "sentiment_confidence": float,\n'
+        '  "niche_relevance": float,\n'
+        '  "analysis_summary": "2-3 sentence analysis of what makes this content effective or not"\n'
+        "}"
+    )
+    return system_prompt, user_prompt
+
+
+def build_similar_script_prompt(
+    brand_ctx: object,
+    original_caption: str,
+    platform: str,
+    extracted_hook: str,
+    extracted_cta: str,
+    content_category: str,
+) -> tuple[str, str]:
+    system_prompt = build_brand_system_prompt(brand_ctx)
+    user_prompt = (
+        f"Generate a {platform} script inspired by this competitor content, "
+        f"but rewritten in our brand voice.\n\n"
+        f"Original caption:\n{original_caption}\n\n"
+        f"Hook used: {extracted_hook}\n"
+        f"CTA used: {extracted_cta}\n"
+        f"Category: {content_category}\n\n"
+        "Create a new, original script that captures the same engagement pattern "
+        "but uses our brand voice and positioning.\n\n"
+        "Return JSON:\n"
+        "{\n"
+        '  "title": "video title",\n'
+        '  "hook": "opening hook (first 3 seconds)",\n'
+        '  "body": "main content script",\n'
+        '  "cta": "call to action",\n'
+        '  "hashtags": ["relevant", "hashtags"],\n'
+        '  "estimated_duration_seconds": int,\n'
+        '  "visual_suggestions": ["suggestion1", "suggestion2"]\n'
+        "}"
+    )
+    return system_prompt, user_prompt

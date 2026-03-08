@@ -46,3 +46,7 @@ class User(Base):
         "WebhookConfig", back_populates="user", cascade="all, delete-orphan"
     )
     jobs = relationship("Job", back_populates="user", cascade="all, delete-orphan")
+    scraped_posts = relationship("ScrapedPost", back_populates="user", cascade="all, delete-orphan")
+    discovery_results = relationship(
+        "DiscoveryResult", back_populates="user", cascade="all, delete-orphan"
+    )

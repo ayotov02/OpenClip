@@ -9,17 +9,16 @@ import {
   Clock,
   Sparkles,
   Flame,
-  Heart,
-  Brain,
-  Target,
   Play,
   Send,
+  Film,
 } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Separator } from "@/components/ui/separator";
+import { VideoEditor } from "@/components/editor/video-editor";
 import { mockProjects, mockClips } from "@/lib/mock-data";
 import { formatDuration, getScoreColor, getScoreBg, getStatusColor } from "@/lib/helpers";
 
@@ -89,12 +88,20 @@ export default function ProjectDetailPage({ params }: { params: Promise<{ id: st
         </div>
       </div>
 
-      <Tabs defaultValue="clips">
+      <Tabs defaultValue="editor">
         <TabsList>
+          <TabsTrigger value="editor" className="gap-1.5">
+            <Film className="h-3.5 w-3.5" />
+            Editor
+          </TabsTrigger>
           <TabsTrigger value="clips">Clips ({clips.length})</TabsTrigger>
           <TabsTrigger value="transcript">Transcript</TabsTrigger>
           <TabsTrigger value="settings">Settings</TabsTrigger>
         </TabsList>
+
+        <TabsContent value="editor" className="mt-4">
+          <VideoEditor projectId={id} />
+        </TabsContent>
 
         <TabsContent value="clips" className="mt-6">
           {clips.length > 0 ? (

@@ -16,6 +16,8 @@ import {
   LayoutDashboard,
   FileStack,
   ImageIcon,
+  Eye,
+  Compass,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import {
@@ -55,6 +57,13 @@ const navGroups: { label: string; items: NavItem[] }[] = [
       { href: "/dashboard/calendar", icon: CalendarDays, label: "Calendar" },
       { href: "/dashboard/publish", icon: Send, label: "Publishing" },
       { href: "/dashboard/batch", icon: FileStack, label: "Batch" },
+    ],
+  },
+  {
+    label: "INTELLIGENCE",
+    items: [
+      { href: "/dashboard/competitors", icon: Eye, label: "Spy Feed" },
+      { href: "/dashboard/discover", icon: Compass, label: "Discovery" },
     ],
   },
   {

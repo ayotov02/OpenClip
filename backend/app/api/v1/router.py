@@ -10,6 +10,8 @@ from app.api.v1.calendar import router as calendar_router
 from app.api.v1.chat import router as chat_router
 from app.api.v1.clips import router as clips_router
 from app.api.v1.competitors import router as competitors_router
+from app.api.v1.discover import router as discover_router
+from app.api.v1.editor import router as editor_router
 from app.api.v1.faceless import router as faceless_router
 from app.api.v1.hashtags import router as hashtags_router
 from app.api.v1.health import router as health_router
@@ -17,6 +19,7 @@ from app.api.v1.jobs import router as jobs_router
 from app.api.v1.projects import router as projects_router
 from app.api.v1.publish import router as publish_router
 from app.api.v1.settings import router as settings_router
+from app.api.v1.spy_feed import router as spy_feed_router
 from app.api.v1.trends import router as trends_router
 
 api_router = APIRouter()
@@ -31,10 +34,13 @@ api_router.include_router(calendar_router)
 api_router.include_router(publish_router)
 api_router.include_router(analytics_router)
 api_router.include_router(competitors_router)
+api_router.include_router(spy_feed_router)
+api_router.include_router(discover_router)
 api_router.include_router(trends_router)
 api_router.include_router(hashtags_router)
 api_router.include_router(batch_router)
 api_router.include_router(assets_router)
 api_router.include_router(chat_router)
 api_router.include_router(settings_router)
+api_router.include_router(editor_router)
 api_router.include_router(jobs_router)

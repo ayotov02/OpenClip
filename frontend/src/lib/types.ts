@@ -175,6 +175,75 @@ export interface ChatMessage {
   createdAt: string;
 }
 
+// Intelligence / Spy Feed types
+export interface ScrapedPost {
+  id: string;
+  competitorId?: string;
+  platform: string;
+  postUrl: string;
+  postType: "video" | "image" | "carousel" | "text";
+  caption?: string;
+  hashtags?: string[];
+  mentions?: string[];
+  mediaUrl?: string;
+  thumbnailUrl?: string;
+  likes: number;
+  views: number;
+  commentsCount: number;
+  shares: number;
+  saves: number;
+  engagementRate: number;
+  authorHandle?: string;
+  followersAtScrape: number;
+  postedAt?: string;
+  scrapedAt: string;
+  hookScore?: number;
+  bodyScore?: number;
+  ctaScore?: number;
+  extractedHook?: string;
+  extractedCta?: string;
+  transcript?: string;
+  contentCategory?: string;
+  sentiment?: "positive" | "negative" | "neutral";
+  sentimentConfidence?: number;
+  nicheRelevance?: number;
+  aiAnalysis?: Record<string, unknown>;
+  analyzedAt?: string;
+}
+
+export interface DiscoveryResult {
+  id: string;
+  query: string;
+  platform: string;
+  postUrl: string;
+  postType: "video" | "image" | "carousel" | "text";
+  title?: string;
+  description?: string;
+  caption?: string;
+  mediaUrl?: string;
+  thumbnailUrl?: string;
+  authorHandle?: string;
+  authorFollowers: number;
+  likes: number;
+  views: number;
+  commentsCount: number;
+  shares: number;
+  engagementRate: number;
+  postedAt?: string;
+  searchedAt: string;
+  hookScore?: number;
+  bodyScore?: number;
+  ctaScore?: number;
+  extractedHook?: string;
+  extractedCta?: string;
+  transcript?: string;
+  contentCategory?: string;
+  sentiment?: "positive" | "negative" | "neutral";
+  nicheRelevance?: number;
+  aiAnalysis?: Record<string, unknown>;
+  analyzedAt?: string;
+}
+
 export type AssetType = "image" | "video" | "audio";
 
 export interface CreativeAsset {

@@ -26,6 +26,7 @@ class Competitor(Base):
     metrics = relationship(
         "CompetitorMetric", back_populates="competitor", cascade="all, delete-orphan"
     )
+    scraped_posts = relationship("ScrapedPost", back_populates="competitor")
 
 
 class CompetitorMetric(Base):
